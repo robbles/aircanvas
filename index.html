@@ -1,0 +1,64 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+lang="en">
+<head>
+
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+
+<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="aircanvas.js"></script>
+
+<style type="text/css">
+body {
+    margin: 0px;
+    padding: 0px;
+}
+#canvasholder {
+    margin: 0 auto;
+    width: 640px;
+}
+
+#canvas {
+    width: 640px;
+    height: 480px;
+    border: 2px solid #012345;
+}
+
+#update, #clear {
+    position: absolute;
+    top: 85%;
+    width: 8%;
+    left: 40%;
+    height: 50px;
+    background-color: #123456;
+    border: 1px solid #012345;
+    color: #ABCDEF;
+    font-family: "Helvetica Neue", Helvetica, "Trebuchet MS", sans-serif;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    min-width: 100px;
+}
+
+#clear {
+    left: 52%;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<div id="canvasholder"><canvas id="canvas" width="100" height="100">canvas goes here</canvas></div>
+<div id="update">Update!</div>
+<div id="clear">Clear</div>
+
+<div id="colorwhite"></div>
+<div id="colorblack"></div>
+
+</body>
+
+</html>
