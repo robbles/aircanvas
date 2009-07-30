@@ -10,9 +10,10 @@ STARTDIR = '/home/rob/canvasapp/'
 
 class CanvasHTTPHandler(SimpleHTTPRequestHandler):
     """
-    An HTTP handler for the cloud bridge that is used by the Web Interface.
-    Since it runs a basic webserver in 'webif/' and exports data in XML and JSON, it can
-    be used to build alternative interfaces to the platform.
+    An HTTP handler for the backend of the canvas app. The javascript client can
+    send it the canvas image in base64 encoding, and it writes it to a PNG file.
+    This image file is then fetched as the initial background to the canvas on the
+    next load of the app. 
 
     NOTE: do_GET is handled by SimpleHTTPRequestHandler, this just defines do_POST
     """
@@ -31,9 +32,6 @@ class CanvasHTTPHandler(SimpleHTTPRequestHandler):
             #print form['canvas'].value[:50]
             
             canvas = urllib.urlopen(form['canvas'].value).read()
-            file = open('../asciiface/canvas.png', 'w')
-            file.write(canvas)
-            file.close()
 
             file2 = open('./canvas.png', 'w')
             file2.write(canvas)
